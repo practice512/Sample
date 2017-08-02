@@ -1,0 +1,256 @@
+-------------------------------------------------------------------------------
+Test set: com.app.testsuits.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 3, Skipped: 3, Time elapsed: 1.582 sec <<< FAILURE!
+Given I launch the amazon application(Scenario: Validate the search results are displayed)  Time elapsed: 0.016 sec  <<< ERROR!
+com.google.inject.ConfigurationException: Guice configuration errors:
+
+1) No implementation for org.openqa.selenium.WebDriver was bound.
+  while locating org.openqa.selenium.WebDriver
+    for field at com.app.pages.BasePage.driver(BasePage.java:13)
+  while locating com.app.pages.SearchResultsPage
+    for field at com.app.steps.SearchSteps.searchResultsPage(SearchSteps.java:11)
+  while locating com.app.steps.SearchSteps
+    for field at com.app.tests.SearchResultsStepDef.searchSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+2) No implementation for org.openqa.selenium.WebDriver was bound.
+  while locating org.openqa.selenium.WebDriver
+    for field at com.app.pages.BasePage.driver(BasePage.java:13)
+  while locating com.app.pages.HomePage
+    for field at com.app.steps.ApplicationSteps.homePage(ApplicationSteps.java:11)
+  while locating com.app.steps.ApplicationSteps
+    for field at com.app.tests.SearchResultsStepDef.appSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+3) No implementation for java.lang.Integer annotated with @com.google.inject.name.Named(value=test.element.wait.seconds) was bound.
+  while locating java.lang.Integer annotated with @com.google.inject.name.Named(value=test.element.wait.seconds)
+    for field at com.app.pages.BasePage.elementWait(BasePage.java:13)
+  while locating com.app.pages.SearchResultsPage
+    for field at com.app.steps.SearchSteps.searchResultsPage(SearchSteps.java:11)
+  while locating com.app.steps.SearchSteps
+    for field at com.app.tests.SearchResultsStepDef.searchSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+4) No implementation for java.lang.Integer annotated with @com.google.inject.name.Named(value=test.element.wait.seconds) was bound.
+  while locating java.lang.Integer annotated with @com.google.inject.name.Named(value=test.element.wait.seconds)
+    for field at com.app.pages.BasePage.elementWait(BasePage.java:13)
+  while locating com.app.pages.HomePage
+    for field at com.app.steps.ApplicationSteps.homePage(ApplicationSteps.java:11)
+  while locating com.app.steps.ApplicationSteps
+    for field at com.app.tests.SearchResultsStepDef.appSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+5) No implementation for java.lang.String annotated with @com.google.inject.name.Named(value=app.url) was bound.
+  while locating java.lang.String annotated with @com.google.inject.name.Named(value=app.url)
+    for field at com.app.pages.HomePage.applicationUrl(HomePage.java:12)
+  while locating com.app.pages.HomePage
+    for field at com.app.steps.ApplicationSteps.homePage(ApplicationSteps.java:11)
+  while locating com.app.steps.ApplicationSteps
+    for field at com.app.tests.SearchResultsStepDef.appSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+6) No implementation for org.openqa.selenium.WebDriver was bound.
+  while locating org.openqa.selenium.WebDriver
+    for field at com.app.pages.HomePage.driver(HomePage.java:12)
+  while locating com.app.pages.HomePage
+    for field at com.app.steps.ApplicationSteps.homePage(ApplicationSteps.java:11)
+  while locating com.app.steps.ApplicationSteps
+    for field at com.app.tests.SearchResultsStepDef.appSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+6 errors
+	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1045)
+	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1004)
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1054)
+	at cucumber.runtime.java.guice.impl.GuiceFactory.getInstance(GuiceFactory.java:42)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+	at ?.Given I launch the amazon application(features/SearchFeature.feature:5)
+
+Scenario: Validate the search results are displayed  Time elapsed: 0.016 sec  <<< ERROR!
+com.google.inject.ConfigurationException: Guice configuration errors:
+
+1) No implementation for org.openqa.selenium.WebDriver was bound.
+  while locating org.openqa.selenium.WebDriver
+    for field at com.app.pages.BasePage.driver(BasePage.java:13)
+  while locating com.app.pages.SearchResultsPage
+    for field at com.app.steps.SearchSteps.searchResultsPage(SearchSteps.java:11)
+  while locating com.app.steps.SearchSteps
+    for field at com.app.tests.SearchResultsStepDef.searchSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+2) No implementation for org.openqa.selenium.WebDriver was bound.
+  while locating org.openqa.selenium.WebDriver
+    for field at com.app.pages.BasePage.driver(BasePage.java:13)
+  while locating com.app.pages.HomePage
+    for field at com.app.steps.ApplicationSteps.homePage(ApplicationSteps.java:11)
+  while locating com.app.steps.ApplicationSteps
+    for field at com.app.tests.SearchResultsStepDef.appSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+3) No implementation for java.lang.Integer annotated with @com.google.inject.name.Named(value=test.element.wait.seconds) was bound.
+  while locating java.lang.Integer annotated with @com.google.inject.name.Named(value=test.element.wait.seconds)
+    for field at com.app.pages.BasePage.elementWait(BasePage.java:13)
+  while locating com.app.pages.SearchResultsPage
+    for field at com.app.steps.SearchSteps.searchResultsPage(SearchSteps.java:11)
+  while locating com.app.steps.SearchSteps
+    for field at com.app.tests.SearchResultsStepDef.searchSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+4) No implementation for java.lang.Integer annotated with @com.google.inject.name.Named(value=test.element.wait.seconds) was bound.
+  while locating java.lang.Integer annotated with @com.google.inject.name.Named(value=test.element.wait.seconds)
+    for field at com.app.pages.BasePage.elementWait(BasePage.java:13)
+  while locating com.app.pages.HomePage
+    for field at com.app.steps.ApplicationSteps.homePage(ApplicationSteps.java:11)
+  while locating com.app.steps.ApplicationSteps
+    for field at com.app.tests.SearchResultsStepDef.appSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+5) No implementation for java.lang.String annotated with @com.google.inject.name.Named(value=app.url) was bound.
+  while locating java.lang.String annotated with @com.google.inject.name.Named(value=app.url)
+    for field at com.app.pages.HomePage.applicationUrl(HomePage.java:12)
+  while locating com.app.pages.HomePage
+    for field at com.app.steps.ApplicationSteps.homePage(ApplicationSteps.java:11)
+  while locating com.app.steps.ApplicationSteps
+    for field at com.app.tests.SearchResultsStepDef.appSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+6) No implementation for org.openqa.selenium.WebDriver was bound.
+  while locating org.openqa.selenium.WebDriver
+    for field at com.app.pages.HomePage.driver(HomePage.java:12)
+  while locating com.app.pages.HomePage
+    for field at com.app.steps.ApplicationSteps.homePage(ApplicationSteps.java:11)
+  while locating com.app.steps.ApplicationSteps
+    for field at com.app.tests.SearchResultsStepDef.appSteps(SearchResultsStepDef.java:14)
+  while locating com.app.tests.SearchResultsStepDef
+
+6 errors
+	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1045)
+	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1004)
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1054)
+	at cucumber.runtime.java.guice.impl.GuiceFactory.getInstance(GuiceFactory.java:42)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+	at ?.Given I launch the amazon application(features/SearchFeature.feature:5)
+
+Scenario: Validate the search results are displayed  Time elapsed: 0.032 sec  <<< ERROR!
+com.google.inject.ConfigurationException: Guice configuration errors:
+
+1) No implementation for org.openqa.selenium.WebDriver was bound.
+  while locating org.openqa.selenium.WebDriver
+    for field at com.app.tests.CucumberHooks.driver(CucumberHooks.java:12)
+  while locating com.app.tests.CucumberHooks
+
+1 error
+	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1045)
+	at com.google.inject.internal.InjectorImpl.getProvider(InjectorImpl.java:1004)
+	at com.google.inject.internal.InjectorImpl.getInstance(InjectorImpl.java:1054)
+	at cucumber.runtime.java.guice.impl.GuiceFactory.getInstance(GuiceFactory.java:42)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+
